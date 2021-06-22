@@ -1,0 +1,2470 @@
+{
+  "contractName": "AlastriaIdentityServiceProvider",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_identityServiceProvider",
+          "type": "address"
+        }
+      ],
+      "name": "addIdentityServiceProvider",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_identityServiceProvider",
+          "type": "address"
+        }
+      ],
+      "name": "deleteIdentityServiceProvider",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_identityServiceProvider",
+          "type": "address"
+        }
+      ],
+      "name": "isIdentityServiceProvider",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.23+commit.124ca40d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_identityServiceProvider\",\"type\":\"address\"}],\"name\":\"addIdentityServiceProvider\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_identityServiceProvider\",\"type\":\"address\"}],\"name\":\"deleteIdentityServiceProvider\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_identityServiceProvider\",\"type\":\"address\"}],\"name\":\"isIdentityServiceProvider\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/identityManager/AlastriaIdentityServiceProvider.sol\":\"AlastriaIdentityServiceProvider\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/identityManager/AlastriaIdentityServiceProvider.sol\":{\"keccak256\":\"0xef3a52b3006bdfaeaa818f29d537566ece92cc538d4f3f20454c0613e9551848\",\"urls\":[\"bzzr://00e19f45dba2c1f743018a6989cd1c4a69e074925e1f88219b0bdca1b4cc0be9\"]},\"/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol\":{\"keccak256\":\"0x1a1f6770dd5537b87e2000dfa0ecad1a2793b43022c736494873fa1e758ea827\",\"urls\":[\"bzzr://129c2ce4884f3aaf9e80cdb8d58c49e5c670cded0e69d545482f8f5ef8460c5e\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055506102cb806100776000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630ebbbffc1461005c5780633bf472151461009f578063d024d9a4146100e2575b600080fd5b34801561006857600080fd5b5061009d600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061013d565b005b3480156100ab57600080fd5b506100e0600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101c4565b005b3480156100ee57600080fd5b50610123600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061024a565b604051808215151515815260200191505060405180910390f35b336101478161024a565b151561015257600080fd5b8161015c8161024a565b15151561016857600080fd5b60016000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b806101ce8161024a565b15156101d957600080fd5b336101e38161024a565b15156101ee57600080fd5b60008060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff1690509190505600a165627a7a72305820940ddfa9b7bc8ed95adbffc0a4b2c5904f0bd2e65871f47a290ee6d8245d668c0029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630ebbbffc1461005c5780633bf472151461009f578063d024d9a4146100e2575b600080fd5b34801561006857600080fd5b5061009d600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061013d565b005b3480156100ab57600080fd5b506100e0600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101c4565b005b3480156100ee57600080fd5b50610123600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061024a565b604051808215151515815260200191505060405180910390f35b336101478161024a565b151561015257600080fd5b8161015c8161024a565b15151561016857600080fd5b60016000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b806101ce8161024a565b15156101d957600080fd5b336101e38161024a565b15156101ee57600080fd5b60008060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff1690509190505600a165627a7a72305820940ddfa9b7bc8ed95adbffc0a4b2c5904f0bd2e65871f47a290ee6d8245d668c0029",
+  "sourceMap": "54:1180:4:-;;;523:68;8:9:-1;5:2;;;30:1;27;20:12;5:2;523:68:4;580:4;556:9;:21;566:10;556:21;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;54:1180;;;;;;",
+  "deployedSourceMap": "54:1180:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;597:229;;8:9:-1;5:2;;;30:1;27;20:12;5:2;597:229:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;832:234;;8:9:-1;5:2;;;30:1;27;20:12;5:2;832:234:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1072:159;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1072:159:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;597:229;702:10;281:51;307:24;281:25;:51::i;:::-;272:61;;;;;;;;741:24;447:51;473:24;447:25;:51::i;:::-;446:52;437:62;;;;;;;;815:4;777:9;:35;787:24;777:35;;;;;;;;;;;;;;;;:42;;;;;;;;;;;;;;;;;;343:1;597:229;;:::o;832:234::-;940:24;281:51;307:24;281:25;:51::i;:::-;272:61;;;;;;;;994:10;281:51;307:24;281:25;:51::i;:::-;272:61;;;;;;;;1054:5;1016:9;:35;1026:24;1016:35;;;;;;;;;;;;;;;;:43;;;;;;;;;;;;;;;;;;343:1;832:234;;:::o;1072:159::-;1166:4;1189:9;:35;1199:24;1189:35;;;;;;;;;;;;;;;;;;;;;;;;;1182:42;;1072:159;;;:::o",
+  "source": "pragma solidity 0.4.23;\n\nimport \"../libs/Eidas.sol\";\n\ncontract AlastriaIdentityServiceProvider {\n\n    using Eidas for Eidas.EidasLevel;\n\n    mapping(address => bool) internal providers;\n\n    modifier onlyIdentityServiceProvider(address _identityServiceProvider) {\n        require (isIdentityServiceProvider(_identityServiceProvider));\n        _;\n    }\n\n    modifier notIdentityServiceProvider(address _identityServiceProvider) {\n        require (!isIdentityServiceProvider(_identityServiceProvider));\n        _;\n    }\n\n    constructor () public {\n\n        providers[msg.sender] = true;\n    }\n\n    function addIdentityServiceProvider(address _identityServiceProvider) public onlyIdentityServiceProvider(msg.sender) notIdentityServiceProvider(_identityServiceProvider) {\n        providers[_identityServiceProvider] = true;\n    }\n\n    function deleteIdentityServiceProvider(address _identityServiceProvider) public onlyIdentityServiceProvider(_identityServiceProvider) onlyIdentityServiceProvider(msg.sender) {\n        providers[_identityServiceProvider] = false;\n    }\n\n    function isIdentityServiceProvider(address _identityServiceProvider) public constant returns (bool) {\n        return providers[_identityServiceProvider];\n    }\n\n}\n",
+  "sourcePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/identityManager/AlastriaIdentityServiceProvider.sol",
+  "ast": {
+    "absolutePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/identityManager/AlastriaIdentityServiceProvider.sol",
+    "exportedSymbols": {
+      "AlastriaIdentityServiceProvider": [
+        937
+      ]
+    },
+    "id": 938,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 842,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol",
+        "file": "../libs/Eidas.sol",
+        "id": 843,
+        "nodeType": "ImportDirective",
+        "scope": 938,
+        "sourceUnit": 1040,
+        "src": "25:27:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 937,
+        "linearizedBaseContracts": [
+          937
+        ],
+        "name": "AlastriaIdentityServiceProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 846,
+            "libraryName": {
+              "contractScope": null,
+              "id": 844,
+              "name": "Eidas",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1039,
+              "src": "108:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Eidas_$1039",
+                "typeString": "library Eidas"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "102:33:4",
+            "typeName": {
+              "contractScope": null,
+              "id": 845,
+              "name": "Eidas.EidasLevel",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1005,
+              "src": "118:16:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                "typeString": "enum Eidas.EidasLevel"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 850,
+            "name": "providers",
+            "nodeType": "VariableDeclaration",
+            "scope": 937,
+            "src": "141:43:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 849,
+              "keyType": {
+                "id": 847,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "149:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "141:24:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 848,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "160:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 861,
+              "nodeType": "Block",
+              "src": "262:89:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 856,
+                            "name": "_identityServiceProvider",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 852,
+                            "src": "307:24:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 855,
+                          "name": "isIdentityServiceProvider",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 936,
+                          "src": "281:25:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 857,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "281:51:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 854,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2148,
+                        2149
+                      ],
+                      "referencedDeclaration": 2148,
+                      "src": "272:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 858,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "272:61:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 859,
+                  "nodeType": "ExpressionStatement",
+                  "src": "272:61:4"
+                },
+                {
+                  "id": 860,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "343:1:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 862,
+            "name": "onlyIdentityServiceProvider",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 853,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 852,
+                  "name": "_identityServiceProvider",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 862,
+                  "src": "228:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 851,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:34:4"
+            },
+            "src": "191:160:4",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 874,
+              "nodeType": "Block",
+              "src": "427:90:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 870,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "446:52:4",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 868,
+                              "name": "_identityServiceProvider",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 864,
+                              "src": "473:24:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 867,
+                            "name": "isIdentityServiceProvider",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 936,
+                            "src": "447:25:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view returns (bool)"
+                            }
+                          },
+                          "id": 869,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "447:51:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 866,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2148,
+                        2149
+                      ],
+                      "referencedDeclaration": 2148,
+                      "src": "437:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 871,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "437:62:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 872,
+                  "nodeType": "ExpressionStatement",
+                  "src": "437:62:4"
+                },
+                {
+                  "id": 873,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "509:1:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 875,
+            "name": "notIdentityServiceProvider",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 864,
+                  "name": "_identityServiceProvider",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 875,
+                  "src": "393:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 863,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:34:4"
+            },
+            "src": "357:160:4",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 885,
+              "nodeType": "Block",
+              "src": "545:46:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 883,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 878,
+                        "name": "providers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 850,
+                        "src": "556:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 881,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 879,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2145,
+                          "src": "566:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 880,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "566:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "556:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 882,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "580:4:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "556:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 884,
+                  "nodeType": "ExpressionStatement",
+                  "src": "556:28:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 886,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 876,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "535:2:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 877,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "545:0:4"
+            },
+            "scope": 937,
+            "src": "523:68:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 904,
+              "nodeType": "Block",
+              "src": "767:59:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 898,
+                        "name": "providers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 850,
+                        "src": "777:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 900,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 899,
+                        "name": "_identityServiceProvider",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 888,
+                        "src": "787:24:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "777:35:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 901,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "815:4:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "777:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 903,
+                  "nodeType": "ExpressionStatement",
+                  "src": "777:42:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 905,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 891,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2145,
+                      "src": "702:3:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 892,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "702:10:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 893,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 890,
+                  "name": "onlyIdentityServiceProvider",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 862,
+                  "src": "674:27:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "674:39:4"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 895,
+                    "name": "_identityServiceProvider",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 888,
+                    "src": "741:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 896,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 894,
+                  "name": "notIdentityServiceProvider",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 875,
+                  "src": "714:26:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "714:52:4"
+              }
+            ],
+            "name": "addIdentityServiceProvider",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 888,
+                  "name": "_identityServiceProvider",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "633:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 887,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "633:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "632:34:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 897,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "767:0:4"
+            },
+            "scope": 937,
+            "src": "597:229:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 923,
+              "nodeType": "Block",
+              "src": "1006:60:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 921,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 917,
+                        "name": "providers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 850,
+                        "src": "1016:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 919,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 918,
+                        "name": "_identityServiceProvider",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 907,
+                        "src": "1026:24:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1016:35:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 920,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1054:5:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1016:43:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 922,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1016:43:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 924,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 910,
+                    "name": "_identityServiceProvider",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 907,
+                    "src": "940:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 911,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 909,
+                  "name": "onlyIdentityServiceProvider",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 862,
+                  "src": "912:27:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "912:53:4"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 913,
+                      "name": "msg",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2145,
+                      "src": "994:3:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_message",
+                        "typeString": "msg"
+                      }
+                    },
+                    "id": 914,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "sender",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "994:10:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 915,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 912,
+                  "name": "onlyIdentityServiceProvider",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 862,
+                  "src": "966:27:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "966:39:4"
+              }
+            ],
+            "name": "deleteIdentityServiceProvider",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 908,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "name": "_identityServiceProvider",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 924,
+                  "src": "871:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "871:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "870:34:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 916,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1006:0:4"
+            },
+            "scope": 937,
+            "src": "832:234:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 935,
+              "nodeType": "Block",
+              "src": "1172:59:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 931,
+                      "name": "providers",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 850,
+                      "src": "1189:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 933,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 932,
+                      "name": "_identityServiceProvider",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 926,
+                      "src": "1199:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1189:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 930,
+                  "id": 934,
+                  "nodeType": "Return",
+                  "src": "1182:42:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 936,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isIdentityServiceProvider",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 926,
+                  "name": "_identityServiceProvider",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 936,
+                  "src": "1107:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 925,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1107:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1106:34:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 930,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 929,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 936,
+                  "src": "1166:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 928,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1166:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1165:6:4"
+            },
+            "scope": 937,
+            "src": "1072:159:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 938,
+        "src": "54:1180:4"
+      }
+    ],
+    "src": "0:1235:4"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/identityManager/AlastriaIdentityServiceProvider.sol",
+      "exportedSymbols": {
+        "AlastriaIdentityServiceProvider": [
+          937
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.4",
+            ".23"
+          ]
+        },
+        "id": 842,
+        "name": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1040,
+          "absolutePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol",
+          "file": "../libs/Eidas.sol",
+          "scope": 938,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 843,
+        "name": "ImportDirective",
+        "src": "25:27:4"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            937
+          ],
+          "name": "AlastriaIdentityServiceProvider",
+          "scope": 938
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Eidas",
+                  "referencedDeclaration": 1039,
+                  "type": "library Eidas"
+                },
+                "id": 844,
+                "name": "UserDefinedTypeName",
+                "src": "108:5:4"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Eidas.EidasLevel",
+                  "referencedDeclaration": 1005,
+                  "type": "enum Eidas.EidasLevel"
+                },
+                "id": 845,
+                "name": "UserDefinedTypeName",
+                "src": "118:16:4"
+              }
+            ],
+            "id": 846,
+            "name": "UsingForDirective",
+            "src": "102:33:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "providers",
+              "scope": 937,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => bool)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 847,
+                    "name": "ElementaryTypeName",
+                    "src": "149:7:4"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 848,
+                    "name": "ElementaryTypeName",
+                    "src": "160:4:4"
+                  }
+                ],
+                "id": 849,
+                "name": "Mapping",
+                "src": "141:24:4"
+              }
+            ],
+            "id": 850,
+            "name": "VariableDeclaration",
+            "src": "141:43:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyIdentityServiceProvider",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_identityServiceProvider",
+                      "scope": 862,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 851,
+                        "name": "ElementaryTypeName",
+                        "src": "228:7:4"
+                      }
+                    ],
+                    "id": 852,
+                    "name": "VariableDeclaration",
+                    "src": "228:32:4"
+                  }
+                ],
+                "id": 853,
+                "name": "ParameterList",
+                "src": "227:34:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                2148,
+                                2149
+                              ],
+                              "referencedDeclaration": 2148,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 854,
+                            "name": "Identifier",
+                            "src": "272:7:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 936,
+                                  "type": "function (address) view returns (bool)",
+                                  "value": "isIdentityServiceProvider"
+                                },
+                                "id": 855,
+                                "name": "Identifier",
+                                "src": "281:25:4"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 852,
+                                  "type": "address",
+                                  "value": "_identityServiceProvider"
+                                },
+                                "id": 856,
+                                "name": "Identifier",
+                                "src": "307:24:4"
+                              }
+                            ],
+                            "id": 857,
+                            "name": "FunctionCall",
+                            "src": "281:51:4"
+                          }
+                        ],
+                        "id": 858,
+                        "name": "FunctionCall",
+                        "src": "272:61:4"
+                      }
+                    ],
+                    "id": 859,
+                    "name": "ExpressionStatement",
+                    "src": "272:61:4"
+                  },
+                  {
+                    "id": 860,
+                    "name": "PlaceholderStatement",
+                    "src": "343:1:4"
+                  }
+                ],
+                "id": 861,
+                "name": "Block",
+                "src": "262:89:4"
+              }
+            ],
+            "id": 862,
+            "name": "ModifierDefinition",
+            "src": "191:160:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "notIdentityServiceProvider",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_identityServiceProvider",
+                      "scope": 875,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 863,
+                        "name": "ElementaryTypeName",
+                        "src": "393:7:4"
+                      }
+                    ],
+                    "id": 864,
+                    "name": "VariableDeclaration",
+                    "src": "393:32:4"
+                  }
+                ],
+                "id": 865,
+                "name": "ParameterList",
+                "src": "392:34:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                2148,
+                                2149
+                              ],
+                              "referencedDeclaration": 2148,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 866,
+                            "name": "Identifier",
+                            "src": "437:7:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!",
+                              "prefix": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "bool",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_address",
+                                          "typeString": "address"
+                                        }
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 936,
+                                      "type": "function (address) view returns (bool)",
+                                      "value": "isIdentityServiceProvider"
+                                    },
+                                    "id": 867,
+                                    "name": "Identifier",
+                                    "src": "447:25:4"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 864,
+                                      "type": "address",
+                                      "value": "_identityServiceProvider"
+                                    },
+                                    "id": 868,
+                                    "name": "Identifier",
+                                    "src": "473:24:4"
+                                  }
+                                ],
+                                "id": 869,
+                                "name": "FunctionCall",
+                                "src": "447:51:4"
+                              }
+                            ],
+                            "id": 870,
+                            "name": "UnaryOperation",
+                            "src": "446:52:4"
+                          }
+                        ],
+                        "id": 871,
+                        "name": "FunctionCall",
+                        "src": "437:62:4"
+                      }
+                    ],
+                    "id": 872,
+                    "name": "ExpressionStatement",
+                    "src": "437:62:4"
+                  },
+                  {
+                    "id": 873,
+                    "name": "PlaceholderStatement",
+                    "src": "509:1:4"
+                  }
+                ],
+                "id": 874,
+                "name": "Block",
+                "src": "427:90:4"
+              }
+            ],
+            "id": 875,
+            "name": "ModifierDefinition",
+            "src": "357:160:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "payable": false,
+              "scope": 937,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 876,
+                "name": "ParameterList",
+                "src": "535:2:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 877,
+                "name": "ParameterList",
+                "src": "545:0:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 850,
+                                  "type": "mapping(address => bool)",
+                                  "value": "providers"
+                                },
+                                "id": 878,
+                                "name": "Identifier",
+                                "src": "556:9:4"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2145,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 879,
+                                    "name": "Identifier",
+                                    "src": "566:3:4"
+                                  }
+                                ],
+                                "id": 880,
+                                "name": "MemberAccess",
+                                "src": "566:10:4"
+                              }
+                            ],
+                            "id": 881,
+                            "name": "IndexAccess",
+                            "src": "556:21:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 882,
+                            "name": "Literal",
+                            "src": "580:4:4"
+                          }
+                        ],
+                        "id": 883,
+                        "name": "Assignment",
+                        "src": "556:28:4"
+                      }
+                    ],
+                    "id": 884,
+                    "name": "ExpressionStatement",
+                    "src": "556:28:4"
+                  }
+                ],
+                "id": 885,
+                "name": "Block",
+                "src": "545:46:4"
+              }
+            ],
+            "id": 886,
+            "name": "FunctionDefinition",
+            "src": "523:68:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "addIdentityServiceProvider",
+              "payable": false,
+              "scope": 937,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_identityServiceProvider",
+                      "scope": 905,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 887,
+                        "name": "ElementaryTypeName",
+                        "src": "633:7:4"
+                      }
+                    ],
+                    "id": 888,
+                    "name": "VariableDeclaration",
+                    "src": "633:32:4"
+                  }
+                ],
+                "id": 889,
+                "name": "ParameterList",
+                "src": "632:34:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 897,
+                "name": "ParameterList",
+                "src": "767:0:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 862,
+                      "type": "modifier (address)",
+                      "value": "onlyIdentityServiceProvider"
+                    },
+                    "id": 890,
+                    "name": "Identifier",
+                    "src": "674:27:4"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "member_name": "sender",
+                      "referencedDeclaration": null,
+                      "type": "address"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 2145,
+                          "type": "msg",
+                          "value": "msg"
+                        },
+                        "id": 891,
+                        "name": "Identifier",
+                        "src": "702:3:4"
+                      }
+                    ],
+                    "id": 892,
+                    "name": "MemberAccess",
+                    "src": "702:10:4"
+                  }
+                ],
+                "id": 893,
+                "name": "ModifierInvocation",
+                "src": "674:39:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 875,
+                      "type": "modifier (address)",
+                      "value": "notIdentityServiceProvider"
+                    },
+                    "id": 894,
+                    "name": "Identifier",
+                    "src": "714:26:4"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 888,
+                      "type": "address",
+                      "value": "_identityServiceProvider"
+                    },
+                    "id": 895,
+                    "name": "Identifier",
+                    "src": "741:24:4"
+                  }
+                ],
+                "id": 896,
+                "name": "ModifierInvocation",
+                "src": "714:52:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 850,
+                                  "type": "mapping(address => bool)",
+                                  "value": "providers"
+                                },
+                                "id": 898,
+                                "name": "Identifier",
+                                "src": "777:9:4"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 888,
+                                  "type": "address",
+                                  "value": "_identityServiceProvider"
+                                },
+                                "id": 899,
+                                "name": "Identifier",
+                                "src": "787:24:4"
+                              }
+                            ],
+                            "id": 900,
+                            "name": "IndexAccess",
+                            "src": "777:35:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 901,
+                            "name": "Literal",
+                            "src": "815:4:4"
+                          }
+                        ],
+                        "id": 902,
+                        "name": "Assignment",
+                        "src": "777:42:4"
+                      }
+                    ],
+                    "id": 903,
+                    "name": "ExpressionStatement",
+                    "src": "777:42:4"
+                  }
+                ],
+                "id": 904,
+                "name": "Block",
+                "src": "767:59:4"
+              }
+            ],
+            "id": 905,
+            "name": "FunctionDefinition",
+            "src": "597:229:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "deleteIdentityServiceProvider",
+              "payable": false,
+              "scope": 937,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_identityServiceProvider",
+                      "scope": 924,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 906,
+                        "name": "ElementaryTypeName",
+                        "src": "871:7:4"
+                      }
+                    ],
+                    "id": 907,
+                    "name": "VariableDeclaration",
+                    "src": "871:32:4"
+                  }
+                ],
+                "id": 908,
+                "name": "ParameterList",
+                "src": "870:34:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 916,
+                "name": "ParameterList",
+                "src": "1006:0:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 862,
+                      "type": "modifier (address)",
+                      "value": "onlyIdentityServiceProvider"
+                    },
+                    "id": 909,
+                    "name": "Identifier",
+                    "src": "912:27:4"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 907,
+                      "type": "address",
+                      "value": "_identityServiceProvider"
+                    },
+                    "id": 910,
+                    "name": "Identifier",
+                    "src": "940:24:4"
+                  }
+                ],
+                "id": 911,
+                "name": "ModifierInvocation",
+                "src": "912:53:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 862,
+                      "type": "modifier (address)",
+                      "value": "onlyIdentityServiceProvider"
+                    },
+                    "id": 912,
+                    "name": "Identifier",
+                    "src": "966:27:4"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "member_name": "sender",
+                      "referencedDeclaration": null,
+                      "type": "address"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 2145,
+                          "type": "msg",
+                          "value": "msg"
+                        },
+                        "id": 913,
+                        "name": "Identifier",
+                        "src": "994:3:4"
+                      }
+                    ],
+                    "id": 914,
+                    "name": "MemberAccess",
+                    "src": "994:10:4"
+                  }
+                ],
+                "id": 915,
+                "name": "ModifierInvocation",
+                "src": "966:39:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 850,
+                                  "type": "mapping(address => bool)",
+                                  "value": "providers"
+                                },
+                                "id": 917,
+                                "name": "Identifier",
+                                "src": "1016:9:4"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 907,
+                                  "type": "address",
+                                  "value": "_identityServiceProvider"
+                                },
+                                "id": 918,
+                                "name": "Identifier",
+                                "src": "1026:24:4"
+                              }
+                            ],
+                            "id": 919,
+                            "name": "IndexAccess",
+                            "src": "1016:35:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 920,
+                            "name": "Literal",
+                            "src": "1054:5:4"
+                          }
+                        ],
+                        "id": 921,
+                        "name": "Assignment",
+                        "src": "1016:43:4"
+                      }
+                    ],
+                    "id": 922,
+                    "name": "ExpressionStatement",
+                    "src": "1016:43:4"
+                  }
+                ],
+                "id": 923,
+                "name": "Block",
+                "src": "1006:60:4"
+              }
+            ],
+            "id": 924,
+            "name": "FunctionDefinition",
+            "src": "832:234:4"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "isIdentityServiceProvider",
+              "payable": false,
+              "scope": 937,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_identityServiceProvider",
+                      "scope": 936,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 925,
+                        "name": "ElementaryTypeName",
+                        "src": "1107:7:4"
+                      }
+                    ],
+                    "id": 926,
+                    "name": "VariableDeclaration",
+                    "src": "1107:32:4"
+                  }
+                ],
+                "id": 927,
+                "name": "ParameterList",
+                "src": "1106:34:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 936,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 928,
+                        "name": "ElementaryTypeName",
+                        "src": "1166:4:4"
+                      }
+                    ],
+                    "id": 929,
+                    "name": "VariableDeclaration",
+                    "src": "1166:4:4"
+                  }
+                ],
+                "id": 930,
+                "name": "ParameterList",
+                "src": "1165:6:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 930
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 850,
+                              "type": "mapping(address => bool)",
+                              "value": "providers"
+                            },
+                            "id": 931,
+                            "name": "Identifier",
+                            "src": "1189:9:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 926,
+                              "type": "address",
+                              "value": "_identityServiceProvider"
+                            },
+                            "id": 932,
+                            "name": "Identifier",
+                            "src": "1199:24:4"
+                          }
+                        ],
+                        "id": 933,
+                        "name": "IndexAccess",
+                        "src": "1189:35:4"
+                      }
+                    ],
+                    "id": 934,
+                    "name": "Return",
+                    "src": "1182:42:4"
+                  }
+                ],
+                "id": 935,
+                "name": "Block",
+                "src": "1172:59:4"
+              }
+            ],
+            "id": 936,
+            "name": "FunctionDefinition",
+            "src": "1072:159:4"
+          }
+        ],
+        "id": 937,
+        "name": "ContractDefinition",
+        "src": "54:1180:4"
+      }
+    ],
+    "id": 938,
+    "name": "SourceUnit",
+    "src": "0:1235:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-05-26T14:23:06.070Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

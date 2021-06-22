@@ -1,0 +1,1161 @@
+{
+  "contractName": "Eidas",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_eidasLevel",
+          "type": "Eidas.EidasLevel"
+        }
+      ],
+      "name": "atLeastLow",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_eidasLevel",
+          "type": "Eidas.EidasLevel"
+        },
+        {
+          "name": "_level",
+          "type": "Eidas.EidasLevel"
+        }
+      ],
+      "name": "atLeast",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.23+commit.124ca40d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_eidasLevel\",\"type\":\"Eidas.EidasLevel\"}],\"name\":\"atLeastLow\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_eidasLevel\",\"type\":\"Eidas.EidasLevel\"},{\"name\":\"_level\",\"type\":\"Eidas.EidasLevel\"}],\"name\":\"atLeast\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol\":\"Eidas\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol\":{\"keccak256\":\"0x1a1f6770dd5537b87e2000dfa0ecad1a2793b43022c736494873fa1e758ea827\",\"urls\":[\"bzzr://129c2ce4884f3aaf9e80cdb8d58c49e5c670cded0e69d545482f8f5ef8460c5e\"]}},\"version\":1}",
+  "bytecode": "0x61014f610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f3007300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630fa78bf714610068578063f2641483146100a3575b600080fd5b610089600480360381019080803560ff1690602001909291905050506100eb565b604051808215151515815260200191505060405180910390f35b6100d1600480360381019080803560ff169060200190929190803560ff1690602001909291905050506100ff565b604051808215151515815260200191505060405180910390f35b60006100f88260026100ff565b9050919050565b600081600481111561010d57fe5b83600481111561011957fe5b10159050929150505600a165627a7a72305820368dc6d4985da63facc8adf439d7d915a647b3791179bd8e21320be23f3cce440029",
+  "deployedBytecode": "0x7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630fa78bf714610068578063f2641483146100a3575b600080fd5b610089600480360381019080803560ff1690602001909291905050506100eb565b604051808215151515815260200191505060405180910390f35b6100d1600480360381019080803560ff169060200190929190803560ff1690602001909291905050506100ff565b604051808215151515815260200191505060405180910390f35b60006100f88260026100ff565b9050919050565b600081600481111561010d57fe5b83600481111561011957fe5b10159050929150505600a165627a7a72305820368dc6d4985da63facc8adf439d7d915a647b3791179bd8e21320be23f3cce440029",
+  "sourceMap": "25:1379:6:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "25:1379:6:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;622:131;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1031:146;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;622:131;687:4;710:36;718:11;731:14;710:7;:36::i;:::-;703:43;;622:131;;;:::o;1031:146::-;1112:4;1162:6;1157:12;;;;;;;;1141:11;1136:17;;;;;;;;:33;;1128:42;;1031:146;;;;:::o",
+  "source": "pragma solidity 0.4.23;\n\nlibrary Eidas {\n\n    enum EidasLevel { Null, Reputational, Low, Substantial, High }\n\n    /*function onlyReputational(EidasLevel _eidasLevel) returns (bool) {\n        return (_eidasLevel == EidasLevel.Reputational);\n    }\n\n    function onlyLow(EidasLevel _eidasLevel) returns (bool) {\n        return (_eidasLevel == EidasLevel.Low);\n    }\n\n    function onlySubstantial(EidasLevel _eidasLevel) returns (bool) {\n        return (_eidasLevel == EidasLevel.Substantial);\n    }\n\n    function onlyHigh(EidasLevel _eidasLevel) returns (bool) {\n        return (_eidasLevel == EidasLevel.High);\n    }*/\n\n    function atLeastLow(EidasLevel _eidasLevel) public pure returns (bool) {\n        return atLeast(_eidasLevel, EidasLevel.Low);\n    }\n\n    /*function alLeastSubstantial(EidasLevel _eidasLevel) returns (bool) {\n        return atLeast(_eidasLevel, EidasLevel.Substantial);\n    }\n\n    function alLeastHigh(EidasLevel _eidasLevel) returns (bool) {\n        return atLeast(_eidasLevel, EidasLevel.High);\n    }*/\n\n    function atLeast(EidasLevel _eidasLevel, EidasLevel _level) public pure returns (bool) {\n        return (uint(_eidasLevel) >= uint(_level));\n    }\n\n    /*function notNull(EidasLevel _eidasLevel) returns (bool) {\n        return _eidasLevel != EidasLevel.Null;\n    }\n\n    function toEidasLevel(uint _level) returns (EidasLevel) {\n        return EidasLevel(_level);\n    }*/\n\n}\n",
+  "sourcePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol",
+  "ast": {
+    "absolutePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol",
+    "exportedSymbols": {
+      "Eidas": [
+        1039
+      ]
+    },
+    "id": 1040,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 999,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1039,
+        "linearizedBaseContracts": [
+          1039
+        ],
+        "name": "Eidas",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Eidas.EidasLevel",
+            "id": 1005,
+            "members": [
+              {
+                "id": 1000,
+                "name": "Null",
+                "nodeType": "EnumValue",
+                "src": "64:4:6"
+              },
+              {
+                "id": 1001,
+                "name": "Reputational",
+                "nodeType": "EnumValue",
+                "src": "70:12:6"
+              },
+              {
+                "id": 1002,
+                "name": "Low",
+                "nodeType": "EnumValue",
+                "src": "84:3:6"
+              },
+              {
+                "id": 1003,
+                "name": "Substantial",
+                "nodeType": "EnumValue",
+                "src": "89:11:6"
+              },
+              {
+                "id": 1004,
+                "name": "High",
+                "nodeType": "EnumValue",
+                "src": "102:4:6"
+              }
+            ],
+            "name": "EidasLevel",
+            "nodeType": "EnumDefinition",
+            "src": "46:62:6"
+          },
+          {
+            "body": {
+              "id": 1018,
+              "nodeType": "Block",
+              "src": "693:60:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1013,
+                        "name": "_eidasLevel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1007,
+                        "src": "718:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                          "typeString": "enum Eidas.EidasLevel"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1014,
+                          "name": "EidasLevel",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1005,
+                          "src": "731:10:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_EidasLevel_$1005_$",
+                            "typeString": "type(enum Eidas.EidasLevel)"
+                          }
+                        },
+                        "id": 1015,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Low",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "731:14:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                          "typeString": "enum Eidas.EidasLevel"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                          "typeString": "enum Eidas.EidasLevel"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                          "typeString": "enum Eidas.EidasLevel"
+                        }
+                      ],
+                      "id": 1012,
+                      "name": "atLeast",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1038,
+                      "src": "710:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_enum$_EidasLevel_$1005_$_t_enum$_EidasLevel_$1005_$returns$_t_bool_$",
+                        "typeString": "function (enum Eidas.EidasLevel,enum Eidas.EidasLevel) pure returns (bool)"
+                      }
+                    },
+                    "id": 1016,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "710:36:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1011,
+                  "id": 1017,
+                  "nodeType": "Return",
+                  "src": "703:43:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1019,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "atLeastLow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1007,
+                  "name": "_eidasLevel",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1019,
+                  "src": "642:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                    "typeString": "enum Eidas.EidasLevel"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1006,
+                    "name": "EidasLevel",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1005,
+                    "src": "642:10:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                      "typeString": "enum Eidas.EidasLevel"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "641:24:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1011,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1010,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1019,
+                  "src": "687:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1009,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "687:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "686:6:6"
+            },
+            "scope": 1039,
+            "src": "622:131:6",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1037,
+              "nodeType": "Block",
+              "src": "1118:59:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1034,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 1029,
+                              "name": "_eidasLevel",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1021,
+                              "src": "1141:11:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                "typeString": "enum Eidas.EidasLevel"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                "typeString": "enum Eidas.EidasLevel"
+                              }
+                            ],
+                            "id": 1028,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1136:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": "uint"
+                          },
+                          "id": 1030,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1136:17:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 1032,
+                              "name": "_level",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1023,
+                              "src": "1162:6:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                "typeString": "enum Eidas.EidasLevel"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                "typeString": "enum Eidas.EidasLevel"
+                              }
+                            ],
+                            "id": 1031,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1157:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": "uint"
+                          },
+                          "id": 1033,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1157:12:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1136:33:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "id": 1035,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1135:35:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1027,
+                  "id": 1036,
+                  "nodeType": "Return",
+                  "src": "1128:42:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1038,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "atLeast",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1024,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1021,
+                  "name": "_eidasLevel",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1038,
+                  "src": "1048:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                    "typeString": "enum Eidas.EidasLevel"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1020,
+                    "name": "EidasLevel",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1005,
+                    "src": "1048:10:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                      "typeString": "enum Eidas.EidasLevel"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1023,
+                  "name": "_level",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1038,
+                  "src": "1072:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                    "typeString": "enum Eidas.EidasLevel"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1022,
+                    "name": "EidasLevel",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1005,
+                    "src": "1072:10:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                      "typeString": "enum Eidas.EidasLevel"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1047:43:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1027,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1026,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1038,
+                  "src": "1112:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1025,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1112:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1111:6:6"
+            },
+            "scope": 1039,
+            "src": "1031:146:6",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1040,
+        "src": "25:1379:6"
+      }
+    ],
+    "src": "0:1405:6"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/santiago/Documents/Teleco/Blockchain/Proyectos/5 - AlastriaIdentity/Pruebas_Quorum/Trabajo/monitor/AlaIdMonitor/contracts/libs/Eidas.sol",
+      "exportedSymbols": {
+        "Eidas": [
+          1039
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.4",
+            ".23"
+          ]
+        },
+        "id": 999,
+        "name": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1039
+          ],
+          "name": "Eidas",
+          "scope": 1040
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Eidas.EidasLevel",
+              "name": "EidasLevel"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Null"
+                },
+                "id": 1000,
+                "name": "EnumValue",
+                "src": "64:4:6"
+              },
+              {
+                "attributes": {
+                  "name": "Reputational"
+                },
+                "id": 1001,
+                "name": "EnumValue",
+                "src": "70:12:6"
+              },
+              {
+                "attributes": {
+                  "name": "Low"
+                },
+                "id": 1002,
+                "name": "EnumValue",
+                "src": "84:3:6"
+              },
+              {
+                "attributes": {
+                  "name": "Substantial"
+                },
+                "id": 1003,
+                "name": "EnumValue",
+                "src": "89:11:6"
+              },
+              {
+                "attributes": {
+                  "name": "High"
+                },
+                "id": 1004,
+                "name": "EnumValue",
+                "src": "102:4:6"
+              }
+            ],
+            "id": 1005,
+            "name": "EnumDefinition",
+            "src": "46:62:6"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "atLeastLow",
+              "payable": false,
+              "scope": 1039,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_eidasLevel",
+                      "scope": 1019,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Eidas.EidasLevel",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "EidasLevel",
+                          "referencedDeclaration": 1005,
+                          "type": "enum Eidas.EidasLevel"
+                        },
+                        "id": 1006,
+                        "name": "UserDefinedTypeName",
+                        "src": "642:10:6"
+                      }
+                    ],
+                    "id": 1007,
+                    "name": "VariableDeclaration",
+                    "src": "642:22:6"
+                  }
+                ],
+                "id": 1008,
+                "name": "ParameterList",
+                "src": "641:24:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1019,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1009,
+                        "name": "ElementaryTypeName",
+                        "src": "687:4:6"
+                      }
+                    ],
+                    "id": 1010,
+                    "name": "VariableDeclaration",
+                    "src": "687:4:6"
+                  }
+                ],
+                "id": 1011,
+                "name": "ParameterList",
+                "src": "686:6:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1011
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                  "typeString": "enum Eidas.EidasLevel"
+                                },
+                                {
+                                  "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                  "typeString": "enum Eidas.EidasLevel"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1038,
+                              "type": "function (enum Eidas.EidasLevel,enum Eidas.EidasLevel) pure returns (bool)",
+                              "value": "atLeast"
+                            },
+                            "id": 1012,
+                            "name": "Identifier",
+                            "src": "710:7:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1007,
+                              "type": "enum Eidas.EidasLevel",
+                              "value": "_eidasLevel"
+                            },
+                            "id": 1013,
+                            "name": "Identifier",
+                            "src": "718:11:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Low",
+                              "referencedDeclaration": null,
+                              "type": "enum Eidas.EidasLevel"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1005,
+                                  "type": "type(enum Eidas.EidasLevel)",
+                                  "value": "EidasLevel"
+                                },
+                                "id": 1014,
+                                "name": "Identifier",
+                                "src": "731:10:6"
+                              }
+                            ],
+                            "id": 1015,
+                            "name": "MemberAccess",
+                            "src": "731:14:6"
+                          }
+                        ],
+                        "id": 1016,
+                        "name": "FunctionCall",
+                        "src": "710:36:6"
+                      }
+                    ],
+                    "id": 1017,
+                    "name": "Return",
+                    "src": "703:43:6"
+                  }
+                ],
+                "id": 1018,
+                "name": "Block",
+                "src": "693:60:6"
+              }
+            ],
+            "id": 1019,
+            "name": "FunctionDefinition",
+            "src": "622:131:6"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "atLeast",
+              "payable": false,
+              "scope": 1039,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_eidasLevel",
+                      "scope": 1038,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Eidas.EidasLevel",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "EidasLevel",
+                          "referencedDeclaration": 1005,
+                          "type": "enum Eidas.EidasLevel"
+                        },
+                        "id": 1020,
+                        "name": "UserDefinedTypeName",
+                        "src": "1048:10:6"
+                      }
+                    ],
+                    "id": 1021,
+                    "name": "VariableDeclaration",
+                    "src": "1048:22:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_level",
+                      "scope": 1038,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Eidas.EidasLevel",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "EidasLevel",
+                          "referencedDeclaration": 1005,
+                          "type": "enum Eidas.EidasLevel"
+                        },
+                        "id": 1022,
+                        "name": "UserDefinedTypeName",
+                        "src": "1072:10:6"
+                      }
+                    ],
+                    "id": 1023,
+                    "name": "VariableDeclaration",
+                    "src": "1072:17:6"
+                  }
+                ],
+                "id": 1024,
+                "name": "ParameterList",
+                "src": "1047:43:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1038,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1025,
+                        "name": "ElementaryTypeName",
+                        "src": "1112:4:6"
+                      }
+                    ],
+                    "id": 1026,
+                    "name": "VariableDeclaration",
+                    "src": "1112:4:6"
+                  }
+                ],
+                "id": 1027,
+                "name": "ParameterList",
+                "src": "1111:6:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1027
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "uint256",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                          "typeString": "enum Eidas.EidasLevel"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(uint256)",
+                                      "value": "uint"
+                                    },
+                                    "id": 1028,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "1136:4:6"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1021,
+                                      "type": "enum Eidas.EidasLevel",
+                                      "value": "_eidasLevel"
+                                    },
+                                    "id": 1029,
+                                    "name": "Identifier",
+                                    "src": "1141:11:6"
+                                  }
+                                ],
+                                "id": 1030,
+                                "name": "FunctionCall",
+                                "src": "1136:17:6"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "uint256",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_enum$_EidasLevel_$1005",
+                                          "typeString": "enum Eidas.EidasLevel"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(uint256)",
+                                      "value": "uint"
+                                    },
+                                    "id": 1031,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "1157:4:6"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1023,
+                                      "type": "enum Eidas.EidasLevel",
+                                      "value": "_level"
+                                    },
+                                    "id": 1032,
+                                    "name": "Identifier",
+                                    "src": "1162:6:6"
+                                  }
+                                ],
+                                "id": 1033,
+                                "name": "FunctionCall",
+                                "src": "1157:12:6"
+                              }
+                            ],
+                            "id": 1034,
+                            "name": "BinaryOperation",
+                            "src": "1136:33:6"
+                          }
+                        ],
+                        "id": 1035,
+                        "name": "TupleExpression",
+                        "src": "1135:35:6"
+                      }
+                    ],
+                    "id": 1036,
+                    "name": "Return",
+                    "src": "1128:42:6"
+                  }
+                ],
+                "id": 1037,
+                "name": "Block",
+                "src": "1118:59:6"
+              }
+            ],
+            "id": 1038,
+            "name": "FunctionDefinition",
+            "src": "1031:146:6"
+          }
+        ],
+        "id": 1039,
+        "name": "ContractDefinition",
+        "src": "25:1379:6"
+      }
+    ],
+    "id": 1040,
+    "name": "SourceUnit",
+    "src": "0:1405:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-05-26T14:23:06.071Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
