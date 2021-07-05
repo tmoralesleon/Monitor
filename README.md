@@ -17,4 +17,4 @@ En Metamask se debe importar la red de Alatria, cuya RPC URL viene en el fichero
 Además se deben importar los JSON de la carpeta mocked-identity-keys para poder tener dichas cuentas en Metamask.
 
 ## Documentación
-La memoria del trabajo fin de grado asociado a este monitor se puede encontrar en este [enlace](https://drive.google.com/file/d/1tWAQExFgXvR-HmEk7XOwZha3IWFP8GCx/view?usp=sharing)
+La memoria del trabajo fin de grado asociada a este repositorio se puede encontrar en este [enlace](https://drive.google.com/file/d/1tWAQExFgXvR-HmEk7XOwZha3IWFP8GCx/view?usp=sharing)
