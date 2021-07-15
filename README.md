@@ -13,7 +13,7 @@ Universidad Politécnica de Madrid
 
 ## Instrucciones de uso
 Para utilizarlo solo se debe clonar el repositorio y hacer "npm install" en la raíz del proyecto y dentro de la carpeta dapp.
-En Metamask se debe importar la red de Alatria, cuya RPC URL viene en el fichero truffle-config.js.
+En Metamask se debe importar la red de Alastria, cuya RPC URL viene en el fichero truffle-config.js.
 Además se deben importar los JSON de la carpeta mocked-identity-keys para poder tener dichas cuentas en Metamask.
 
 ## Documentación
